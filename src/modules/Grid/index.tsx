@@ -1,0 +1,30 @@
+import { useDispatch } from "react-redux";
+import { PlusCircleIcon } from "@heroicons/react/24/solid";
+import Card from "@/components/Card";
+import { IPokemon } from "@/interfaces/types";
+import { addPokemon } from "@/store/pokemonsSlice";
+
+interface IGrid {
+  pokemons: IPokemon[];
+}
+
+export default function Grid({ pokemons }: IGrid) {
+  const dispatch = useDispatch();
+
+  const handleAddPokemon = (pokemon: IPokemon) => {
+    dispatch(addPokemon(pokemon));
+  };
+
+  return (
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+      {pokemons.map((pokemon) => (
+        <Card
+          key={pokemon.id}
+          pokemon={pokemon}
+          onClick={() => handleAddPokemon(pokemon)}
+          buttonIcon={PlusCircleIcon}
+        />
+      ))}
+    </div>
+  );
+}
