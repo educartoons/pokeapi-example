@@ -1,4 +1,4 @@
-import { IPokemon } from "@/interfaces/types";
+import { IPokemon } from "src/interfaces/types";
 import Card from "../Card";
 import { TrashIcon } from "@heroicons/react/16/solid";
 

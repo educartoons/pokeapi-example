@@ -1,5 +1,5 @@
 import Button from "../Button";
-import { IPokemon } from "@/interfaces/types";
+import { IPokemon } from "src/interfaces/types";
 import { Link } from "react-router-dom";
 
 interface ICard {

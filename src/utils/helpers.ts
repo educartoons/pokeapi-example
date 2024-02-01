@@ -1,5 +1,5 @@
 import { PokeAPI } from "pokeapi-types";
-import { IPokemon } from "@/interfaces/types";
+import { IPokemon } from "src/interfaces/types";
 import { PokemonStatsName, REGEX_TO_GET_NUMBER_ID_FROM_URL } from "./constants";
 
 export function getNumberIdFromUrl(url: string): number {
