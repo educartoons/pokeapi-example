@@ -4,11 +4,11 @@ import Card from "@/components/Card";
 import { IPokemon } from "@/interfaces/types";
 import { addPokemon } from "@/store/pokemonsSlice";
 
-interface IGrid {
+interface IPokemonsGrid {
   pokemons: IPokemon[];
 }
 
-export default function Grid({ pokemons }: IGrid) {
+export default function PokemonsGrid({ pokemons }: IPokemonsGrid) {
   const dispatch = useDispatch();
 
   const handleAddPokemon = (pokemon: IPokemon) => {

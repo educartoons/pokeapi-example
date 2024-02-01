@@ -29,7 +29,7 @@ export function filterPokemonsByTerm(pokemons: IPokemon[], term: string) {
   );
 }
 
-export function findStatfromPokemoStats(
+export function findStatfromPokemonStats(
   stats: PokeAPI.PokemonStat[],
   statName: string
 ) {
@@ -66,16 +66,16 @@ export function getListOfStats(pokemon: PokeAPI.Pokemon) {
     {
       id: 3,
       name: "Ataque",
-      value: findStatfromPokemoStats(pokemon.stats, PokemonStatsName.Attack),
+      value: findStatfromPokemonStats(pokemon.stats, PokemonStatsName.Attack),
     },
     {
       name: "Defensa",
-      value: findStatfromPokemoStats(pokemon.stats, PokemonStatsName.Defense),
+      value: findStatfromPokemonStats(pokemon.stats, PokemonStatsName.Defense),
     },
     {
       id: 4,
       name: "Ataque especial",
-      value: findStatfromPokemoStats(
+      value: findStatfromPokemonStats(
         pokemon.stats,
         PokemonStatsName.SpecialAttack
       ),
@@ -83,7 +83,7 @@ export function getListOfStats(pokemon: PokeAPI.Pokemon) {
     {
       id: 5,
       name: "Defensa especial",
-      value: findStatfromPokemoStats(
+      value: findStatfromPokemonStats(
         pokemon.stats,
         PokemonStatsName.SpecialDefense
       ),
@@ -91,7 +91,7 @@ export function getListOfStats(pokemon: PokeAPI.Pokemon) {
     {
       id: 6,
       name: "Velocidad",
-      value: findStatfromPokemoStats(pokemon.stats, PokemonStatsName.Speed),
+      value: findStatfromPokemonStats(pokemon.stats, PokemonStatsName.Speed),
     },
   ];
 }

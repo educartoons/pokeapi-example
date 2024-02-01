@@ -4,7 +4,7 @@ import SearchBox from "@/components/SearchBox";
 import { useGetPokemonsQuery } from "@/services/pokemonApi";
 import { useDebounce } from "@uidotdev/usehooks";
 import { filterPokemonsByTerm } from "@/utils/helpers";
-import Grid from "@/modules/Grid";
+import PokemonsGrid from "@/modules/PokemonsGrid";
 
 export default function HomePage() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -26,7 +26,7 @@ export default function HomePage() {
   return (
     <div>
       <SearchBox value={searchTerm} onSearch={handleSearch} />
-      <Grid pokemons={filteredPokemons} />
+      <PokemonsGrid pokemons={filteredPokemons} />
     </div>
   );
 }
