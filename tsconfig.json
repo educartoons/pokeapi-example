@@ -23,7 +23,8 @@
     "paths": {
       "src/*": ["./src/*"]
     },
-    "types": ["node"]
+    "types": ["node"],
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["node_modules"]
