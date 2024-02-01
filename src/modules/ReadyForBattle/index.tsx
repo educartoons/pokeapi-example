@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-import { removePokemonById } from "@/store/pokemonsSlice";
-import { RootState } from "@/store/store";
-import PokemonsCart from "@/components/Cart";
+import { removePokemonById } from "src/store/pokemonsSlice";
+import { RootState } from "src/store/store";
+import PokemonsCart from "src/components/Cart";
 
 export default function ReadyForBattle() {
   const pokemons = useSelector(

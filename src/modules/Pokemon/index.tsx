@@ -1,12 +1,12 @@
 import { PokeAPI } from "pokeapi-types";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addPokemon, removePokemonById } from "@/store/pokemonsSlice";
+import { addPokemon, removePokemonById } from "src/store/pokemonsSlice";
 import { ArrowLongLeftIcon } from "@heroicons/react/24/solid";
-import { RootState } from "@/store/store";
-import Button from "@/components/Button";
-import PokemonDetails from "@/components/PokemonDetails";
-import { formatIPokemon, isThisPokemonInList } from "@/utils/helpers";
+import { RootState } from "src/store/store";
+import Button from "src/components/Button";
+import PokemonDetails from "src/components/PokemonDetails";
+import { formatIPokemon, isThisPokemonInList } from "src/utils/helpers";
 
 interface IPokemon {
   pokemon: PokeAPI.Pokemon;

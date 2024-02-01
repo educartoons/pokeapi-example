@@ -1,7 +1,7 @@
-import { IGetPokemonResponse } from "@/interfaces/types";
-import { getNumberIdFromUrl } from "@/utils/helpers";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { PokeAPI } from "pokeapi-types";
+import { IGetPokemonResponse } from "src/interfaces/types";
+import { getNumberIdFromUrl } from "src/utils/helpers";
 
 export const pokemonApi = createApi({
   reducerPath: "pokemonApi",

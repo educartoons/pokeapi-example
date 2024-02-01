@@ -1,10 +1,10 @@
 import { useState } from "react";
-import Layout from "@/components/Layout";
-import SearchBox from "@/components/SearchBox";
-import { useGetPokemonsQuery } from "@/services/pokemonApi";
 import { useDebounce } from "@uidotdev/usehooks";
-import { filterPokemonsByTerm } from "@/utils/helpers";
-import PokemonsGrid from "@/modules/PokemonsGrid";
+import Layout from "src/components/Layout";
+import SearchBox from "src/components/SearchBox";
+import { useGetPokemonsQuery } from "src/services/pokemonApi";
+import { filterPokemonsByTerm } from "src/utils/helpers";
+import PokemonsGrid from "src/modules/PokemonsGrid";
 
 export default function HomePage() {
   const [searchTerm, setSearchTerm] = useState("");

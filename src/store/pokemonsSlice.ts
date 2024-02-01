@@ -1,7 +1,7 @@
-import { IPokemon } from "@/interfaces/types";
-import { isThisPokemonInList } from "@/utils/helpers";
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
+import { IPokemon } from "src/interfaces/types";
+import { isThisPokemonInList } from "src/utils/helpers";
 
 export interface PokemonsState {
   readyToBattle: IPokemon[];

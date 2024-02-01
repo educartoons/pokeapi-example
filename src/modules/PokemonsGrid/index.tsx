@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
 import { PlusCircleIcon } from "@heroicons/react/24/solid";
-import Card from "@/components/Card";
-import { IPokemon } from "@/interfaces/types";
-import { addPokemon } from "@/store/pokemonsSlice";
+import Card from "src/components/Card";
+import { IPokemon } from "src/interfaces/types";
+import { addPokemon } from "src/store/pokemonsSlice";
 
 interface IPokemonsGrid {
   pokemons: IPokemon[];

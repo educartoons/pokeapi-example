@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import HomePage from "@/pages/HomePage";
-import PokemonPage from "@/pages/PokemonPage";
-import Layout from "./components/Layout";
-import ReadyForBattle from "./modules/ReadyForBattle";
+import HomePage from "src/pages/HomePage";
+import PokemonPage from "src/pages/PokemonPage";
+import Layout from "src/components/Layout";
+import ReadyForBattle from "src/modules/ReadyForBattle";
 
 function App() {
   return (

@@ -1,4 +1,4 @@
-import { getListOfStats } from "@/utils/helpers";
+import { getListOfStats } from "src/utils/helpers";
 import { PokeAPI } from "pokeapi-types";
 import Stat from "../Stat";
 

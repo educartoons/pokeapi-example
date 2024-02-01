@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
-import { useGetPokemonByNameQuery } from "@/services/pokemonApi";
-import Spinner from "@/components/Spinner";
-import Pokemon from "@/modules/Pokemon";
+import { useGetPokemonByNameQuery } from "src/services/pokemonApi";
+import Spinner from "src/components/Spinner";
+import Pokemon from "src/modules/Pokemon";
 
 export default function PokemonPage() {
   const { pokemonName } = useParams();
