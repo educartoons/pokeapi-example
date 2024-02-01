@@ -9,7 +9,6 @@ export const pokemonApi = createApi({
     baseUrl: "https://pokeapi.co/api/v2/",
   }),
   endpoints: (builder) => ({
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     getPokemons: builder.query<IGetPokemonResponse, void>({
       query: () => "pokemon?limit=151",
       transformResponse: (response: IGetPokemonResponse) => {

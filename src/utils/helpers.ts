@@ -101,6 +101,7 @@ export function formatIPokemon(pokemon: PokeAPI.Pokemon): IPokemon {
     name: pokemon.name,
     imgUrl: `https://img.pokemondb.net/artwork/large/${pokemon.name}.jpg`,
     id: pokemon.id,
+    url: "",
   };
 }
 
