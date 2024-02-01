@@ -1,16 +1,12 @@
-import {
-  formatIPokemon,
-  getListOfStats,
-  isThisPokemonInList,
-} from "@/utils/helpers";
 import { PokeAPI } from "pokeapi-types";
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addPokemon, removePokemonById } from "@/store/pokemonsSlice";
 import { ArrowLongLeftIcon } from "@heroicons/react/24/solid";
-import { useNavigate } from "react-router-dom";
 import { RootState } from "@/store/store";
-import Stat from "../Stat";
-import Button from "../Button";
+import Button from "@/components/Button";
+import PokemonDetails from "@/components/PokemonDetails";
+import { formatIPokemon, isThisPokemonInList } from "@/utils/helpers";
 
 interface IPokemon {
   pokemon: PokeAPI.Pokemon;
@@ -20,7 +16,6 @@ export default function Pokemon({ pokemon }: IPokemon) {
   const pokemons = useSelector(
     (state: RootState) => state.pokemons.readyToBattle
   );
-  const stats = getListOfStats(pokemon);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -35,7 +30,7 @@ export default function Pokemon({ pokemon }: IPokemon) {
   };
 
   return (
-    <div className=" bg-white mx-auto p-8 rounded-md relative">
+    <div className="relative w-full text-center">
       <div className="absolute top-4 left-4">
         <Button
           onClick={() => navigate("/")}
@@ -53,26 +48,8 @@ export default function Pokemon({ pokemon }: IPokemon) {
           }
         />
       </div>
-      <div className="max-w-96 mx-auto">
-        <figure>
-          <img
-            src={`https://img.pokemondb.net/artwork/large/${pokemon.name}.jpg`}
-            alt=""
-          />
-        </figure>
-        <div>
-          <div className="mt-6 border-t border-gray-100">
-            <dl className="divide-y divide-gray-100">
-              {stats.map((stat) => (
-                <Stat
-                  key={stat.name}
-                  name={stat.name}
-                  value={String(stat.value)}
-                />
-              ))}
-            </dl>
-          </div>
-        </div>
+      <div className="w-[500px] bg-white p-5 inline-block mt-16">
+        <PokemonDetails pokemon={pokemon} />
       </div>
     </div>
   );

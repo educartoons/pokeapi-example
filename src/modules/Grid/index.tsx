@@ -23,6 +23,7 @@ export default function Grid({ pokemons }: IGrid) {
           pokemon={pokemon}
           onClick={() => handleAddPokemon(pokemon)}
           buttonIcon={PlusCircleIcon}
+          disabledClick={false}
         />
       ))}
     </div>

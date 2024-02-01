@@ -1,8 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
-import { TrashIcon } from "@heroicons/react/24/solid";
-import Card from "@/components/Card";
 import { removePokemonById } from "@/store/pokemonsSlice";
 import { RootState } from "@/store/store";
+import PokemonsCart from "@/components/Cart";
 
 export default function ReadyForBattle() {
   const pokemons = useSelector(
@@ -16,20 +15,16 @@ export default function ReadyForBattle() {
 
   return (
     <div className="">
-      <h2 className="mb-4 uppercase text-black">Listos para el combate</h2>
-      <div className="grid grid-cols-2 gap-2">
-        {pokemons.map((pokemon) => (
-          <div key={pokemon.id} className="mb-2">
-            <Card
-              pokemon={pokemon}
-              onClick={() => {
-                handleClickCard(pokemon.id);
-              }}
-              buttonIcon={TrashIcon}
-            />
-          </div>
-        ))}
-      </div>
+      <h2 className="text-sm font-semibold tracking-wide text-gray-900 uppercase lg:text-xs mb-4">
+        Listos para el combate
+      </h2>
+      {pokemons.length > 0 ? (
+        <PokemonsCart pokemons={pokemons} onClick={handleClickCard} />
+      ) : (
+        <p className="text-sm text-gray-500">
+          Lista vacia, no hay ningún pokemon listo
+        </p>
+      )}
     </div>
   );
 }
